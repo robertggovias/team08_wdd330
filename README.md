@@ -1,6 +1,6 @@
 # sleepoutside
 
-Application site link in deply
+Application site link in deploy
 https://672d72dd5f49cfbab4b36d2f--dynamic-ganache-6b8aa8.netlify.app/
 
 ## Description
