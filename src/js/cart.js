@@ -41,4 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 0);
     cartTotalAmount.textContent = total.toFixed(2);
   }
+  
 });
