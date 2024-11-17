@@ -1,7 +1,5 @@
 import { getLocalStorage } from "./utils.mjs";
 
-// Gets the content in the local storage which can be an object ( key value pair)
-// or an array of objects and creates carts.
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
