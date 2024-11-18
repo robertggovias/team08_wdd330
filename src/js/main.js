@@ -1,5 +1,6 @@
 import ProductData from "./ProductData.mjs";
 import { ProductListing } from "./productList.mjs";
+import Alert from "./alerts.mjs";
 
 // Instantiates the product data class and store
 // creates a data source.
@@ -12,3 +13,8 @@ const productsListing = new ProductListing("Tents", dataSource, listElement);
 
 // initialize the function.
 productsListing.init();
+
+// Instantiating and creating an alert object.
+const aletrtsDataSource = new ProductData("alerts");
+const alertMessages = new Alert("alerts", aletrtsDataSource);
+alertMessages.init();
