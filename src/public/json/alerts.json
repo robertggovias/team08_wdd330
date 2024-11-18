@@ -1,21 +1,21 @@
 [
   {
-    "message": "Here commes message 1 ",
+    "message": "Here comes announcement 1 ",
     "background": "black",
     "color": "white"
   },
   {
-    "message": "Here commes message 2 ",
+    "message": "Here comes announcement 2 ",
     "background": "#0066ff",
     "color": "white"
   },
   {
-    "message": "Here commes message 3",
+    "message": "Here comes announcement 3",
     "background": "#003844",
     "color": "white"
   },
   {
-    "message": "Here commes message 4",
+    "message": "Here comes announcement 4",
     "background": "#5D675B",
     "color": "white"
   }
