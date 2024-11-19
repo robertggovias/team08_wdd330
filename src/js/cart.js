@@ -1,5 +1,5 @@
 import { getLocalStorage } from "./utils.mjs";
-import { cartSuperScript } from "./cartSuperScript.mjs";
+import { cartSuperScript } from "./cartSuperscript.mjs";
 
 
 function renderCartContents() {
