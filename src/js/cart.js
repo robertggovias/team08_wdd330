@@ -1,4 +1,5 @@
 import { getLocalStorage } from "./utils.mjs";
+import { cartSuperScript } from "./cartSuperScript.mjs";
 
 
 function renderCartContents() {
@@ -43,3 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
 });
+
+
+// Adding super script to the cart icon to display the
+// number of items in the cart
+const element = document.querySelector(".cart");
+const iconSuperScript = new cartSuperScript(element)
+iconSuperScript.init();
+
+
