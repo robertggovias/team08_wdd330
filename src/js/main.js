@@ -1,6 +1,7 @@
 import ProductData from "./ProductData.mjs";
 import { ProductListing } from "./productList.mjs";
 import Alert from "./alerts.mjs";
+import { cartSuperScript } from "./cartSuperScript.mjs";
 
 // Instantiates the product data class and store
 // creates a data source.
@@ -18,3 +19,9 @@ productsListing.init();
 const aletrtsDataSource = new ProductData("alerts");
 const alertMessages = new Alert("alerts", aletrtsDataSource);
 alertMessages.init();
+
+// Adding super script to the cart icon to display the
+// number of items in the cart
+const element = document.querySelector(".cart");
+const iconSuperScript = new cartSuperScript(element)
+iconSuperScript.init();
