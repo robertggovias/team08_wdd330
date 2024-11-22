@@ -2,7 +2,9 @@ import ProductData from "./ProductData.mjs";
 import { ProductListing } from "./productList.mjs";
 import Alert from "./alerts.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 
+loadHeaderFooter();
 // Instantiates the product data class and store
 // creates a data source.
 const dataSource = new ProductData("tents");
