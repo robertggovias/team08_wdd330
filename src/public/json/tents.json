@@ -13,7 +13,7 @@
       }
     ],
     "DescriptionHtmlSimple": "Get out and enjoy nature with Marmot&#39;s Ajax tent, featuring a smart design with durable, waterproof construction and two doors for easy access.",
-    "SuggestedRetailPrice": 300.0,
+    "SuggestedRetailPrice": 300.00,
     "Brand": {
       "Id": "1308",
       "LogoSrc": "../images/logos/marmot-160x100.jpg",
