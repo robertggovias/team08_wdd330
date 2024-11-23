@@ -2,11 +2,13 @@ import { getLocalStorage, loadHeaderFooter } from "./utils.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
 import ShoppingCart from "./ShoppingCart.mjs";
 
+
 // w03 innit fixed pz
 loadHeaderFooter();
 
 const cart = new ShoppingCart("so-cart", ".product-list");
 cart.renderCartContents();
+
 
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart") || [];
