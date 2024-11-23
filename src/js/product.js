@@ -9,31 +9,15 @@ const product = new ProductDetails(productId, dataSource);
 product.init();
 
 // w03 init fixed pz
-loadHeaderFooter();
-
-// Adding super script to the cart icon to display the
-// number of items in the cart
-const element = document.querySelector(".cart");
-const iconSuperScript = new cartSuperScript(element)
-iconSuperScript.init();
-
-
-// console.log(dataSource.findProductById(product));
-
-// Gets an an object or an empty array where product would be pushed into
-// and push the key value pair object into.
-// function addProductToCart(product) {
-//   const currentCart = getLocalStorage("so-cart") || [];
-//   currentCart.push(product);
-//   setLocalStorage("so-cart", currentCart);
-// }
-// add to cart button event handler
-// async function addToCartHandler(e) {
-//   const product = await dataSource.findProductById(e.target.dataset.id);
-//   addToCart(product);
-// }
-
-// add listener to Add to Cart button
-// document
-//   .getElementById("addToCart")
-//   .addEventListener("click", addToCartHandler);
+document.addEventListener("DOMContentLoaded", () => {
+  loadHeaderFooter().then(() => {
+    // Adding super script to the cart icon to display the number of items in the cart
+    const element = document.querySelector(".cart");
+    if (element) {
+      const iconSuperScript = new cartSuperScript(element);
+      iconSuperScript.init();
+    } else {
+      console.error('Element not found for selector: .cart');
+    }
+  });
+});
