@@ -18,7 +18,11 @@ export class cartSuperScript {
             span.textContent = numberOfItems;
 
             // this.element.innerHTML = "";
-            this.element.appendChild(span);
+            if (this.element) {
+                this.element.appendChild(span);
+            } else {
+                console.error();
+            }
         }
         
     }
