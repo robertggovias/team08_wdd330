@@ -46,9 +46,13 @@ export function renderListWithTemplate(templateFn, parentElement, list, position
 }
 
 export function renderWithTemplate(templateFn, parentElement, data, callback){
-  parentElement.insertAdjacentHTML("afterbegin", templateFn);
-  if(callback) {
-    callback(data);
+  if (parentElement) {
+    parentElement.insertAdjacentHTML("afterbegin", templateFn(data));
+    if (callback) {
+      callback(data);
+    }
+  } else {
+    console.error(`Element not found for selector: ${parentElement}`);
   }
 }
 
@@ -56,8 +60,6 @@ async function loadTemplate (path) {
   const respond = await fetch(path);
   const data = await respond.text();
   return data;
-  
-
 }
 
 export async function loadHeaderFooter() {
@@ -65,8 +67,14 @@ export async function loadHeaderFooter() {
     const footerpath = await loadTemplate('../partials/footer.html');
     const header = document.getElementById('main-header');
     const footer = document.getElementById('main-footer');
-    renderWithTemplate(headerpath, header);
-    renderWithTemplate(footerpath, footer);
+    if (header) {
+        renderWithTemplate((data) => headerpath, header);
+    } else {
+        console.error('Header element not found');
+    }
+    if (footer) {
+        renderWithTemplate((data) => footerpath, footer);
+    } else {
+        console.error('Footer element not found');
+    }
 }
-
-
