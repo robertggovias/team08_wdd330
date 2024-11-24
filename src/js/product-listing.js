@@ -5,7 +5,7 @@ import { cartSuperScript } from "./cartSuperscript.mjs";
 
 // Individual 03 try
 loaderHeaderFooter();
-    const category = getParams('caregory');
+    const category = getParams('category');
     const dataSource = new ProductData();
 
     // Get an element on the DOM.
@@ -20,12 +20,12 @@ loaderHeaderFooter();
 
 
 
-/* // w03 fixed
+// w03 fixed
 document.addEventListener("DOMContentLoaded", () => {
   loadHeaderFooter().then(() => {
     // Instantiates the product data class and store
     // creates a data source.
-    const category = getParams('caregory');
+    const category = getParams('category');
     const dataSource = new ProductData();
 
     // Get an element on the DOM.
@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize the function.
     productsListing.init();
 
+    //titulod e la página
+    document.title = `Top Products: ${category.charAt(0).toUpperCase() + category.slice(1)}`;
     
 
     // Adding super script to the cart icon to display the number of items in the cart
@@ -49,4 +51,4 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error('Element not found for selector: .cart');
     }
   });
-}); */
+}); 
