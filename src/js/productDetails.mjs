@@ -21,7 +21,7 @@ import {
               </div></section>`;
   }
   
-  export default class ProductDetails {
+  export class ProductDetails {
     constructor(productId, dataSource) {
       this.productId = productId;
       this.product = {};
