@@ -22,10 +22,12 @@ export class ProductListing {
         // Gets an array of object from a data source
         const list = await this.dataSource.getData(this.category);
         // Stores the new array into the variable limitToFour
-        const limitToFour = this.limitProductsToFour(list);
+        /* const limitToFour = this.limitProductsToFour(list);
         // Calls the renderList function and pass in the new array
         // with the four elements
-        this.renderList(limitToFour);
+        this.renderList(limitToFour); */
+        this.renderList(list);
+        document.querySelector(".title").innerHTML = this.category;
     }
     // A function that takes accepts an array or objects and calls
     // another function responsible for listing the products.
