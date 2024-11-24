@@ -20,7 +20,7 @@ export class ProductListing {
     }
     async init(){
         // Gets an array of object from a data source
-        const list = await this.dataSource.getData();
+        const list = await this.dataSource.getData(this.category);
         // Stores the new array into the variable limitToFour
         const limitToFour = this.limitProductsToFour(list);
         // Calls the renderList function and pass in the new array

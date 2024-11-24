@@ -241,3 +241,13 @@ footer {
   align-content: center;
   justify-content: center;
 }
+
+.categories_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;  
+}
+
+.categories_grid img {
+  margin: 0 50px;
+}
