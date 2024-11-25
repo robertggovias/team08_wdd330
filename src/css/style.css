@@ -278,8 +278,40 @@ footer {
 
 .discount{
   color: white;
-  background-color: darkred;
+  background-color: rgb(74, 139, 0);
   border-radius: 10px;
   padding: 5px 12px;
   margin-left: 10 px;  
+}
+
+.discount_flag{  
+    border-radius: 6px 0 0 6px;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    background: #93274f;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+}
+.discount_flag::before,
+.discount_flag::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    display: block;
+}
+.discount_flag::before {
+    top: 0;
+    border-width: 22px 15px 0 0;
+    border-color: #93274f transparent transparent transparent;
+}
+.discount_flag::after {
+    bottom: 0;
+    border-width: 0 15px 22px 0;
+    border-color: transparent transparent #93274f transparent;
 }
