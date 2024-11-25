@@ -67,7 +67,8 @@ export async function loadHeaderFooter() {
     if (header) {
         renderWithTemplate((data) => headerpath, header);
     } else {
-        console.error('Header element not found');
+        console.error();
+        // console.error('Header element not found');         //pz
     }
     if (footer) {
         renderWithTemplate((data) => footerpath, footer);
