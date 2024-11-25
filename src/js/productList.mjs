@@ -23,7 +23,7 @@ export class ProductListing {
     }
     async init(){
         const list = await this.dataSource.getData(this.category);
-        const limitToFour = this.limitProductsToFour(list);
+        const limitToFour = this.renderList(list);
         // Calls the renderList function and pass in the new array
         // with the four elements
         this.renderList(limitToFour);
@@ -33,12 +33,11 @@ export class ProductListing {
     renderList(list){
         renderListWithTemplate(productCartTemplate, this.listElement, list)
     }
-
     // Takes the list of products (array) and creats a new
     // array out of it having only 4 products.
-    limitProductsToFour(list){
-        return list.slice(0, 4);
-    }
+    // limitProductsToFour(list){
+    //     return list.slice(0, 9);
+    // }
 
     // renderList(list) {
     //     const htmlStrings = list.map(productCardTemplate);
