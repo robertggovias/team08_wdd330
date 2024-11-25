@@ -1,13 +1,9 @@
 import { getParams, loadHeaderFooter } from "./utils.mjs";
-import ProductData from "./ProductData.mjs";
+
 import { ProductDetails } from "./productDetails.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
+import ExternalProductData from "./ExternalProductData.mjs";
 
-
-const dataSource = new ProductData("tents");
-const productId = getParams("product");
-const product = new ProductDetails(productId, dataSource);
-product.init();
 
 // w03 init fixed pz
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,5 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       console.error('Element not found for selector: .cart');
     }
+
+    const dataSource = new ExternalProductData();
+    const productId = getParams("product");
+    const product = new ProductDetails(productId, dataSource);
+    product.init();
   });
 });

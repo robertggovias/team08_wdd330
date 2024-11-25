@@ -1,0 +1,27 @@
+[
+    {
+      "ImgUrl": "https://byui-cit.github.io/wdd330/images/category-icons/noun_Tent_3544767.svg",
+      "Alt": "Tent Icon from Noun Project: Mustofa Bayu",
+      "Name": "Tent",
+      "CategoryName": "tents"
+    },
+    {
+      "ImgUrl": "https://byui-cit.github.io/wdd330/images/category-icons/noun_Sleeping%20Bag_3544775.svg",
+      "Alt": "Sleeping Bag Icon from Noun Project: Mustofa Bayu",
+      "Name": "Sleeping Bag",
+      "CategoryName": "sleeping-bags"
+    },
+    {
+      "ImgUrl": "https://byui-cit.github.io/wdd330/images/category-icons/noun_carrier%20bag_3544771.svg",
+      "Alt": "Backpack Icon from Noun Project: Mustofa Bayu",
+      "Name": "Backpack",
+      "CategoryName": "backpacks"
+    },
+    {
+      "ImgUrl": "https://byui-cit.github.io/wdd330/images/category-icons/noun_Hammock_791143.svg",
+      "Alt": "Hammock Icon from Noun Project: Paul Richard",
+      "Name": "Hammock",
+      "CategoryName": "hammocks"
+    }
+    
+  ]

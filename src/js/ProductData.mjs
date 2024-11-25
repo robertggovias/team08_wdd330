@@ -1,3 +1,4 @@
+
 function convertToJson(res) {
   if (res.ok) {
     return res.json();
@@ -11,7 +12,10 @@ export default class ProductData {
     this.category = category;
     this.path = `../json/${this.category}.json`;
   }
-  getData() {
+  async getData(category) {
+    // const response = await fetch(baseURL + `products/search/${category}`);
+    // const data = await convertToJson(response);
+    // return data.Result;
     return fetch(this.path)
       .then(convertToJson)
       .then((data) => data);

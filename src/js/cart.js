@@ -4,7 +4,7 @@ import ShoppingCart from "./ShoppingCart.mjs";
 
 
 // w03 innit fixed pz
-loadHeaderFooter();
+await loadHeaderFooter();
 
 const cart = new ShoppingCart("so-cart", ".product-list");
 cart.renderCartContents();

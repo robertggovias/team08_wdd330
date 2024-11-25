@@ -123,11 +123,13 @@ button {
   padding: 0.5em;
 }
 .product-list {
-  display: flex;
+  display: grid;
+  grid-template: auto/repeat(4, 1fr) ;
+  /* display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   list-style-type: none;
-  padding: 0;
+  padding: 0; */
 }
 .product-list a {
   text-decoration: none;
@@ -140,6 +142,8 @@ button {
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
+  list-style: none;
+  text-align: center;
 }
 .product-card h2,
 .product-card h3,

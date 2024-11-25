@@ -78,3 +78,7 @@ export async function loadHeaderFooter() {
         console.error('Footer element not found');
     }
 }
+
+export function capitalizingAString(string){
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
