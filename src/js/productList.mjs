@@ -1,12 +1,15 @@
 import { renderListWithTemplate } from "./utils.mjs";
 
-function productCartTemplate(product){
+function productCartTemplate(product){  
+  const discount = product.SuggestedRetailPrice.toFixed(2) - product.FinalPrice.toFixed(2);
+  const discountFlag = (discount * 100) / product.SuggestedRetailPrice.toFixed(2);
     return `<li class="product-card">
-          <a href="product_pages/index.html?product=${product.Id}">
-            <img src="${product.Image}" alt="Image of ${product.Name}">
+          <a href="/product_pages/index.html?product=${product.Id}">
+            <img src="${product.Images.PrimaryMedium}" alt="Image of ${product.Name}">
             <h3 class="card__brand">${product.Brand.Name}</h3>
             <h2 class="card__name">${product.Name}</h2>
-            <p class="product-card__price">${product.FinalPrice}</p>
+            <p class="product-card__price">$${product.FinalPrice}  <span class="discount"> save $${discount.toFixed(2)} </span> <span class="discount_flag">${discountFlag.toFixed(0)} % off!</span>
+            </p>
           </a>
         </li>`;
 }
@@ -19,9 +22,7 @@ export class ProductListing {
         this.listElement = listElement;
     }
     async init(){
-        // Gets an array of object from a data source
-        const list = await this.dataSource.getData();
-        // Stores the new array into the variable limitToFour
+        const list = await this.dataSource.getData(this.category);
         const limitToFour = this.limitProductsToFour(list);
         // Calls the renderList function and pass in the new array
         // with the four elements

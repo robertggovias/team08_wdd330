@@ -1,5 +1,4 @@
 import ProductData from "./ProductData.mjs";
-import { ProductListing } from "./productList.mjs";
 import Alert from "./alerts.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
 import { loadHeaderFooter } from "./utils.mjs";
@@ -7,19 +6,21 @@ import { loadHeaderFooter } from "./utils.mjs";
 // w03 fixed
 document.addEventListener("DOMContentLoaded", () => {
   loadHeaderFooter().then(() => {
-    // Instantiates the product data class and store
-    // creates a data source.
-    const dataSource = new ProductData("tents");
+    // // Instantiates the product data class and store
+    // // creates a data source.
+    // const dataSource = new ProductData("tents");
 
-    // Get an element on the DOM.
-    const listElement = document.querySelector(".product-list");
+    // // Get an element on the DOM.
+    // const listElement = document.querySelector(".product-list");
 
-    // Create an instance of ProductListing class and pass in the
-    // product category, data source to get data and the element where products are listed.
-    const productsListing = new ProductListing("Tents", dataSource, listElement);
+    // // Create an instance of ProductListing class and pass in the
+    // // product category, data source to get data and the element where products are listed.
+    // const productsListing = new ProductListing("Tents", dataSource, listElement);
 
-    // Initialize the function.
-    productsListing.init();
+    // // Initialize the function.
+    // productsListing.init();
+
+    // UP MOVED TO Product-Listing.js PZ
 
     // Instantiating and creating an alert object.
     const aletrtsDataSource = new ProductData("alerts");

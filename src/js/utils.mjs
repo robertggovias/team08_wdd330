@@ -33,16 +33,13 @@ export function getParams(param){
 // If it is create a template for each object in the array label "list"
 // Insert the html templates into the parent element.
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterBegin",  clear = false){
-  if(clear) parentElement.innerHTML = "";
+  if (parentElement) {
+    if (clear) parentElement.innerHTML = "";
     const htmlStrings = list.map(templateFn);
     parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
-  
-  // if(clear){
-  //   parentElement.innerHTML = "";
-  // }else{
-  //   const htmlStrings = list.map(templateFn);
-  //   parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
-  // }
+  } else {
+    console.error();
+  }
 }
 
 export function renderWithTemplate(templateFn, parentElement, data, callback){
