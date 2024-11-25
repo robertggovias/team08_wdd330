@@ -275,3 +275,11 @@ footer {
   margin-top: 10px;
   font-size: 1.2em;
 }
+
+.discount{
+  color: white;
+  background-color: darkred;
+  border-radius: 10px;
+  padding: 5px 12px;
+  margin-left: 10 px;  
+}
