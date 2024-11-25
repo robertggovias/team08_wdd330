@@ -315,3 +315,36 @@ footer {
     border-width: 0 15px 22px 0;
     border-color: transparent transparent #93274f transparent;
 }
+
+
+/************* Search Bar *******************/
+.search {
+  align-items: center;
+}
+
+.search input {
+  height: 1.75rem;
+  border-radius: .4rem 0 0 .4rem;
+  border: 1px solid var(--dark-grey);
+  border-right-style: none;
+}
+.search button {
+  background-color: #fff;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 1px solid var(--dark-grey);
+  border-radius: 0 .4rem .4rem 0;
+}
+.search button img {
+  max-width: auto;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap {
+  gap: 1rem;
+}

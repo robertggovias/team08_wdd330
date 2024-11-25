@@ -1,3 +1,5 @@
+import { initializeSearchBar } from "./searchBar.mjs";
+
 // wrapper for querySelector...returns matching element
 export function qs(selector, parent = document) {
   return parent.querySelector(selector);
@@ -75,4 +77,6 @@ export async function loadHeaderFooter() {
     } else {
         console.error('Footer element not found');
     }
+
+    initializeSearchBar()
 }
