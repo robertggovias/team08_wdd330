@@ -23,7 +23,7 @@ export class SearchBar {
     searchValue() {
       if (this.input.validity.valid)
         window.location.assign(
-          `/product-listing/index.html?search=${this.input.value}`,
+          `/product-listing/index.html?category=${this.input.value}`,
         );
     }
   }
