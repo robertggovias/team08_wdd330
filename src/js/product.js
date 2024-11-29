@@ -3,7 +3,6 @@ import ProductData from "./ProductData.mjs";
 import { ProductDetails } from "./productDetails.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
 
-
 const dataSource = new ProductData("tents");
 const productId = getParams("product");
 const product = new ProductDetails(productId, dataSource);
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const iconSuperScript = new cartSuperScript(element);
       iconSuperScript.init();
     } else {
-      console.error('Element not found for selector: .cart');
+      console.error("Element not found for selector: .cart");
     }
   });
 });

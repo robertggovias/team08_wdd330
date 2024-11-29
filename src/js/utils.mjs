@@ -80,3 +80,27 @@ export async function loadHeaderFooter() {
 
     initializeSearchBar()
 }
+
+
+/***************** Checkout Processes ****************/
+export function getElement(query) {
+  return document.querySelector(query);
+}
+
+export function getCartItems() {
+  return getLocalStorage("so-cart");
+}
+
+//Add up the total and pass it to the html cart-total
+export function calculateTotalPrice() {
+  const cartItems = getCartItems();
+  if (cartItems != null || cartItems != undefined) {
+    const totalPrice = parseFloat(cartItems.reduce(
+      (acc, item) => acc + item.FinalPrice * item.Quantity,
+      0,
+    ).toFixed(2));
+    return totalPrice
+  } else {
+    return 0
+  }
+}

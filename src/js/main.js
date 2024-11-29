@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const iconSuperScript = new cartSuperScript(element);
       iconSuperScript.init();
     } else {
-      console.error('Element not found for selector: .cart');
+      console.error("Element not found for selector: .cart");
     }
   });
 });
