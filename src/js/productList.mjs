@@ -14,33 +14,27 @@ function productCartTemplate(product){
         </li>`;
 }
 
-
 export class ProductListing {
     constructor(category, dataSource, listElement){
         this.category = category;
         this.dataSource = dataSource;
         this.listElement = listElement;
+        this.products = [];
     }
     async init(){
-        const list = await this.dataSource.getData(this.category);
-        const limitToFour = this.renderList(list);
-        // Calls the renderList function and pass in the new array
-        // with the four elements
-        this.renderList(limitToFour);
+        this.products = await this.dataSource.getData(this.category);
+        this.renderList(this.products);
     }
-    // A function that takes accepts an array or objects and calls
-    // another function responsible for listing the products.
     renderList(list){
-        renderListWithTemplate(productCartTemplate, this.listElement, list)
+        renderListWithTemplate(productCartTemplate, this.listElement, list);
     }
-    // Takes the list of products (array) and creats a new
-    // array out of it having only 4 products.
-    // limitProductsToFour(list){
-    //     return list.slice(0, 9);
-    // }
-
-    // renderList(list) {
-    //     const htmlStrings = list.map(productCardTemplate);
-    //     this.listElement.insertAdjacentHTML("afterbegin", htmlStrings.join(""));
-    // }
+    sortProducts(criteria) {
+        let sortedProducts;
+        if (criteria === 'name') {
+            sortedProducts = this.products.sort((a, b) => a.Name.localeCompare(b.Name));
+        } else if (criteria === 'price') {
+            sortedProducts = this.products.sort((a, b) => a.FinalPrice - b.FinalPrice);
+        }
+        this.renderList(sortedProducts);
+    }
 }
