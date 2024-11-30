@@ -1,4 +1,4 @@
-import ProductData from "./ProductData.mjs";
+import ExternalServices from "./ExternalServices.mjs";
 import { ProductListing } from "./productList.mjs";
 import { loadHeaderFooter, getParams } from "./utils.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHeaderFooter().then(() => {
     const category = getParams("category");
 
-    const dataSource = new ProductData();
+    const dataSource = new ExternalServices();
 
     const listElement = document.querySelector(".product-list");
 
