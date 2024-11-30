@@ -2,13 +2,11 @@ import { getLocalStorage, loadHeaderFooter } from "./utils.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
 import ShoppingCart from "./ShoppingCart.mjs";
 
-
 // w03 innit fixed pz
 loadHeaderFooter();
 
 const cart = new ShoppingCart("so-cart", ".product-list");
 cart.renderCartContents();
-
 
 // function renderCartContents() {
 //   const cartItems = getLocalStorage("so-cart") || [];
@@ -37,22 +35,22 @@ cart.renderCartContents();
 
 // renderCartContents();
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const cartItems = getLocalStorage("so-cart") || [];
-  const cartFooter = document.querySelector('.cart-footer');
-  const cartTotalAmount = document.getElementById('cart-total-amount');
+  const cartFooter = document.querySelector(".cart-footer");
+  const cartTotalAmount = document.getElementById("cart-total-amount");
 
   if (cartFooter) {
     if (cartItems.length > 0) {
-      cartFooter.classList.remove('hide');
+      cartFooter.classList.remove("hide");
       const total = cartItems.reduce((sum, item) => {
         const price = parseFloat(item.FinalPrice) || 0;
-        return sum + price; 
+        return sum + price;
       }, 0);
       cartTotalAmount.textContent = total.toFixed(2);
     }
   } else {
-    console.error('Element not found for selector: .cart-footer');
+    console.error("Element not found for selector: .cart-footer");
   }
 });
 
@@ -63,5 +61,5 @@ if (element) {
   const iconSuperScript = new cartSuperScript(element);
   iconSuperScript.init();
 } else {
-  console.error('Element not found for selector: .cart');
+  console.error("Element not found for selector: .cart");
 }

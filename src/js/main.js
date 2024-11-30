@@ -1,4 +1,4 @@
-import ProductData from "./ProductData.mjs";
+import ExternalServices from "./ExternalServices.mjs";
 import Alert from "./alerts.mjs";
 import { cartSuperScript } from "./cartSuperscript.mjs";
 import { loadHeaderFooter } from "./utils.mjs";
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHeaderFooter().then(() => {
     // // Instantiates the product data class and store
     // // creates a data source.
-    // const dataSource = new ProductData("tents");
+    // const dataSource = new ExternalServices("tents");
 
     // // Get an element on the DOM.
     // const listElement = document.querySelector(".product-list");
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // UP MOVED TO Product-Listing.js PZ
 
     // Instantiating and creating an alert object.
-    const aletrtsDataSource = new ProductData("alerts");
+    const aletrtsDataSource = new ExternalServices("alerts");
     const alertMessages = new Alert("alerts", aletrtsDataSource);
     alertMessages.init();
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const iconSuperScript = new cartSuperScript(element);
       iconSuperScript.init();
     } else {
-      console.error('Element not found for selector: .cart');
+      console.error("Element not found for selector: .cart");
     }
   });
 });

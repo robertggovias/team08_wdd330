@@ -9,10 +9,11 @@
     <title>Sleep Outside | Checkout</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <script src="../js/checkout.js" type="module"></script>
   </head>
 
   <body>
-    <header class="divider" >
+    <header class="divider">
       <div class="logo">
         <img src="images/noun_Tent_2517.svg" alt="tent image for logo" />
 
@@ -59,7 +60,97 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
+        <div class="summaryContainer">
+            <h3>Subtotal:</h3><div class="subtotal"></div>
+            <h3>Shipping Estimate:</h3><div class="shippingEstimate"></div>
+            <h3>Tax:</h3><div class="tax"></div>
+            <h3>Order Total:</h3><div class="orderTotal"></div> 
+        </div>
       </section>
+      <form class= "checkoutForm" action="">
+        <fieldset>
+          <legend>Customer Name</legend>
+          <label>First Name:* <input type="text" name="fname" id="fname" required></label>
+          <label>Last Name:* <input type="text" name="lname" id="lname" required></label>
+        </fieldset>
+        <fieldset>
+          <legend>Address</legend>
+          <label>Street Address:* <input type="text" name="street" id="streetAddress" required></label>
+          <label>City:* <input type="text" name="city" id="city" required></label>
+          <label>State:* <input type="text" name="state" id="state" required></label>
+          <label>Zipcode:* <input type="text" name="zip" id="zipcode" required></label>
+        </fieldset>
+        <fieldset>
+          <legend>Payment</legend>
+          <label>Credit Card Number:* <input type="text" name="cardNumber" id="cardNumber" value="1234123412341234" required></label>
+          <label>Expiration Date:* <input type="text" name="expiration" id="expiration" value="8/25" required></label>
+          <label>Security Code:* <input type="text" name="code" id="securityCode" value="123" required></label>
+        </fieldset>
+        <button class="purchaseButton">Purchase</button>
+      </form>
+      <!-- <section class="products">
+        <h2>Review & Place your Order</h2>
+      </section> -->
+      <!-- <form id="checkoutForm">
+        <h2>Customer Information</h2>
+        <div class="form-group">
+          <label for="firstName">First Name</label
+          ><input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label
+          ><input type="text" id="lastName" name="lastName" required />
+        </div>
+        <h2>Address</h2>
+        <div class="form-group">
+          <label for="streetAddress">Street Address</label
+          ><input
+            type="text"
+            id="streetAddress"
+            name="streetAddress"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="city">City</label
+          ><input type="text" id="city" name="city" required />
+        </div>
+        <div class="form-group">
+          <label for="state">State</label
+          ><input type="text" id="state" name="state" required />
+        </div>
+        <div class="form-group">
+          <label for="zipCode">Zip Code</label
+          ><input type="text" id="zipCode" name="zipCode" required />
+        </div>
+        <h2>Payment Information</h2>
+        <div class="form-group">
+          <label for="cardNumber">Credit Card Number</label
+          ><input type="text" id="cardNumber" name="cardNumber" required />
+        </div>
+        <div class="form-group">
+          <label for="expirationDate">Expiration Date (MM/YY)</label
+          ><input
+            type="text"
+            id="expirationDate"
+            name="expirationDate"
+            placeholder="MM/YY"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="securityCode">Security Code</label
+          ><input type="text" id="securityCode" name="securityCode" required />
+        </div>
+        <button type="submit">Checkout</button>
+      </form>
+      <div class="checkout-summary">
+        <h3>Order Summary</h3>
+        <div class="sumary" ><span id="total">Subtotal:</span> </div>
+        <div class="sumary" ><span id="shipping">Shipping Estimate:</span> <span>$5.00</span></div>
+        <div class="sumary" ><span id="tax">Tax: </span></div>
+        <div class="sumary" ><span id="order-tal"> <strong>Order Total:</strong></span></div>
+      </div> -->
     </main>
 
     <footer>&copy;NOT a real business</footer>
