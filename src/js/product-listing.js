@@ -25,7 +25,5 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         console.error('Element not found for selector: .cart');
       }
-
-      const sortByNameButton = document.getElementById('sort-by-name'); const sortByPriceButton = document.getElementById('sort-by-price'); sortByNameButton.addEventListener('click', () => { productsListing.sortProducts('name'); }); sortByPriceButton.addEventListener('click', () => { productsListing.sortProducts('price'); });
     });  
 });
