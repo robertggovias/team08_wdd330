@@ -24,7 +24,7 @@ function formDataToJSON(formElement) {
 }
 
 
-export default class CheckoutProcess {
+export class CheckoutProcess {
     constructor() {
       this.init();
     }

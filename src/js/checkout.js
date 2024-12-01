@@ -1,5 +1,5 @@
 import { getElement, loadHeaderFooter } from "./utils.mjs";
-import { CheckoutProcess } from "./CheckoutProcess.mjs";
+import { CheckoutProcess } from "./checkoutProcesses.mjs";
 const zipInput = getElement("#zipcode");
 const checkoutProcess = new CheckoutProcess();
 const formButton = getElement(".purchaseButton");
