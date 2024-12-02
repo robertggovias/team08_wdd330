@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from "./utils.mjs";
+import { getLocalStorage, setLocalStorage, alertMessage } from "./utils.mjs";
 
 function renderProductDetailsTemplate(product){
     return `
@@ -46,6 +46,7 @@ export class ProductDetails{
         const currentCart = getLocalStorage("so-cart") || [];
         currentCart.push(this.product);
         setLocalStorage("so-cart", currentCart);
+        alertMessage(`${this.product.NameWithoutBrand} added to cart!`);
     }
     renderProductDetails(selector){
         const element = document.querySelector(selector);
