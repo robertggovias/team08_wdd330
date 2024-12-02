@@ -1,4 +1,4 @@
-import { getLocalStorage, calculateTotalPrice, getCartItems, setLocalStorage } from "./utils.mjs";
+import { getLocalStorage, calculateTotalPrice, getCartItems, setLocalStorage, removeAlerts } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs"
 
 function packageItems(items){
@@ -61,10 +61,11 @@ export class CheckoutProcess {
         try {
           const response = await this.externalServices.checkout(orderObject);
           setLocalStorage("so-cart", []);
-          // location.assign("checkout/success.html");
+          location.assign("checkout/success.html");
           console.log(response);
         }catch(err) {
-          console.log(err)
+          console.log(err);
+          removeAlerts();
         }
       }
   
