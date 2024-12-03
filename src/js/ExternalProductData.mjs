@@ -17,7 +17,6 @@ export default class ExternalProductData {
   async getExternalData(category) {
     const response = await fetch(baseURL + `products/search/${category}`);
     const data = await convertToJson(response);
-    console.log(data);
     return data.Result;
     // return fetch(this.path)
     //   .then(convertToJson)
